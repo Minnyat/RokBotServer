@@ -1,1 +1,1 @@
-web: gunicorn 'rokApi.wsgi'
+web: gunicorn rokApi.wsgi
