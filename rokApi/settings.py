@@ -55,7 +55,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "rokapi.urls"
+ROOT_URLCONF = "rokApi.urls"
 
 TEMPLATES = [
     {
