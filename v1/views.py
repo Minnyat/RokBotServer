@@ -11,6 +11,7 @@ def lyceum(request):
         question = request.GET['question']
         checkAnswer = CheckAnswer()
         answer = checkAnswer.check(question)
+        print(answer)
         if answer == None:
             return Response(status=status.HTTP_404_NOT_FOUND)
         else:
