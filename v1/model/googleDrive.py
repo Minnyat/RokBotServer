@@ -18,7 +18,7 @@ class GgDrive():
         self.df = pd.DataFrame(self.worksheet.get_all_records())
     def addQuestion(self,questions: list, answers:list):
         dc = pd.DataFrame({'Questions': questions, 'Answer':answers})
-        df = pd.concat([df,dc])
+        self.df = self.df.append(dc, ignore_index=True)
         self.worksheet.update([dc.columns.values.tolist()] + dc.values.tolist())
         return True
     def get(self):

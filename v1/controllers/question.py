@@ -19,6 +19,14 @@ class CheckAnswer():
         if best< self.MIN_CORRECT:
             return None
         else: return {'answer':curBest[1], 'certainty': best}
+def pushToDrive(questions,answers):
+    gg = GgDrive()
+    check = CheckAnswer().check(questions)
+    if check == None:
+        gg.addQuestion([questions],[answers])
+        return True
+    else:
+        return False
 class GoogleSrearch():
     def __init__(self):
         self.MIN_CORRECT = 0.6
